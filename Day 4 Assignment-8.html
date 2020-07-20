@@ -3,37 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DAY-4-ASSIGNMENT</title>
+    <h1>QUESTION-8</h1>
 </head>
 <body>
-    var total = parseInt( sessionStorage.getItem( "total" ) );
-var quantity = 2;
-var updatedTotal = total * quantity;
-sessionStorage.setItem( "total", updatedTotal ); // '240', a string
-var cart = {
-    item: "Product 1",
-    price: 35.50,
-    qty: 2
-};
-var jsonStr = JSON.stringify( cart );
-sessionStorage.setItem( "cart", jsonStr );
-// now the cart is {"item":"Product 1","price":35.50,"qty":2}
-var cartValue = sessionStorage.getItem( "cart" );
-var cartObj = JSON.parse( cartValue );
-// original object
+    <script>
+        let ask=(question,yes,no) =>{
+            if(confirm(question))  yes();
+            else no();
+        }
 
-
-INDEX.HTML
-<div class="product-description" data-name="Wine #1" data-price="5">
-    <h3 class="product-name">Wine #1</h3>
-        <p class="product-price">&euro; 5</p>
-        <form class="add-to-cart" action="cart.html" method="post">
-            <div>
-                <label for="qty-1">Quantity</label>
-                <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
-            </div>
-            <p><input type="submit" value="Add to cart" class="btn" /></p>
-        </form>
-</div>
+        ask("Do you agree",alert("you agreed"),alert("you cancelled the execution"))
+    </script>
 </body>
 </html>
