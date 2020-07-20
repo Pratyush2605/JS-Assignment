@@ -3,85 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculator</title>
-   
+    <title>DAY-4-ASSIGNMENT</title>
+    <h1>QUESTION-1</h1>
 </head>
 <body>
-    // Iterate using a recursive function
-    // firing a callback once per iteration
-    
-    function f(s,n) {
-        if(++n >= 102) return;
-        s === '' ? console.log(n-1) : console.log(s);
-        !!(n % 3)
-            ? !!(n % 5)
-                ? f('',n) : f('Buzz',n)
-            : !!(n % 5)
-                ? f('Fizz',n) : f('FizzBuzz',n);
-    }
-    
-    // Iterate using a `while` loop
-    // firing a callback after satisfying a condition
-    
-    function b(n) {
-        var i = n;
-        $:
-            while(++i) {
-                if(i % 3)
-                    if(i % 5) 
-                        console.log(i);
-                    else 
-                        console.log('Buzz');
-                else if(i % 5) 
-                    console.log('Fizz');
-                else 
-                    console.log('FizzBuzz');
-                if(i >= 100) 
-                    break $;
+    <script>
+        for(var i=1;i<=100;i++){
+            if(i%3==0 && i%5==0){
+                console.log(i+" fizzbuzz");
+                //document.write("\n");
             }
-        return;
-    }
-    
-    // Iterate using a `for` loop
-    // firing a callback once per iteration
-    
-    function F(n) {
-        var i = n, f = 'Fizz', b = 'Buzz', o = '';
-        for (; i <= 100; i++) { 
-            o = !(i % 3) 
-                ? !(i % 5) 
-                    ? f + b : f 
-                : !(i % 5) 
-                    ? b : i; 
-            console.log(o);
+            else if(i%3==0){
+                console.log(i+" fizz");
+                //document.write("\n");
+            }
+            else if(i%5==0){
+                console.log(i+" buzz");
+                //document.write("\n");
+            }
         }
-        return;
-    }
-    
-    // Iterate using a `for` loop
-    // firing a callback after satisfying a condition
-    
-    function B(n) {
-        var i = n;
-        var fiz = 'Fizz';
-        var buz = 'Buzz';
-        for(; i <= 100; i++)
-            if(!(i % 3))
-                if(!(i % 5))
-                    console.log(fiz + buz);
-                else
-                    console.log(fiz);
-            else if(!(i % 5))
-                console.log(buz);
-            else
-                console.log(i);
-        return;     
-    }
-    
-    
-    f('', 1); // recursive
-    b(0);     // `while`
-    F(1);     // `for`
-    B(1);     // `for
-    </body>
+    </script>
+</body>
 </html>
